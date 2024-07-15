@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Adblock Restriction Popup Remover",
+  "version": "1.0",
+  "description": "A browser extension to remove Adblock Restriction Popup using 'fc-ab-root'.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "content.js" ]
+    }
+  ]
+}
